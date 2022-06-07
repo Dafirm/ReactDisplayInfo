@@ -1,0 +1,17 @@
+body {
+  background-color: green;
+}
+
+.heading{
+  text-align: center;
+  font-size: 50px;
+  font-style: normal;
+}
+
+.user.card{
+  
+  text-align: center;
+
+  height: 40vmin;
+  pointer-events: none;
+}
