@@ -4,21 +4,24 @@ import Home from './Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import FullDetails from "./FullDetails.js"
-//import { BrowserRouter, Route } from 'react-router-dom'
+import Contact from "./Contact.js"
+
 
 
 function App() {
 
  return (
+   <div>
    <BrowserRouter>
-    <div>
       <NavBar/>
+
           <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/:id" element={<FullDetails />}/>
+          <Route path = "/contact" element ={<Contact Us/>}/>
           </Routes>
-      </div>
       </BrowserRouter>
+      </div>
   );
 }
 

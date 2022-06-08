@@ -8,6 +8,12 @@ body{
   font-family: "Quicksand";
   color: #333;
 }
+.nav{
+  font-size: 30px!important;
+}
+.nav1{
+  margin-left: 600px!important;
+}
 .home{
   margin-left: 50px !important;
   margin-right: 50px !important;
@@ -70,7 +76,21 @@ p{
   width: 25em;
   border-radius: 10px;
 }
-
+.contactUs{
+  background-color: #ffff;
+  margin-top: 30px;
+  border-color: black;
+  width: 40em;
+  text-decoration: none;
+  word-wrap: normal;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 5px;
+}
+h3{
+  font-size: 20px!important;
+}
 ul.list{
   list-style-position: outside!important;
 }

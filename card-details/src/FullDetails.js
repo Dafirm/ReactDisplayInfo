@@ -18,33 +18,33 @@ const FullDetails = ({ clients }) => {
 const fetchDetails = async() => {
   let response = await fetch("https://jsonplaceholder.typicode.com/users/" + id)
   let data = await response.json()
-  console.log(data.address.city)
+
   setDetails(data)
 }
   return(
-    <>{details && ( //get all details first and output data
+    <>{details && ( //get all details first and out
       <div className ="FullDetail">
-        <Card>
-          <Card.Body>
-            <Card.Title>Name : {details.name}</Card.Title>
-              <ul className ="list">
-                  <li>Username: {details.username}</li>
-                  <li>Email Address: {details.email}</li>
-                  <li>Phone Number: {details.phone}</li>
-                  <li>Website: {details.website}</li>
-                  <li>Company: {details.company.name}</li>
-                  <li>Address: </li>
-                <ul>
-                  <li>Street: {details.address.street}</li>
-                  <li>Suite: {details.address.suite}</li>
-                  <li>City: {details.address.city}</li>
-                  <li>Zipcode: {details.address.zipcode}</li>
-                </ul>
+      <Card>
+        <Card.Body>
+          <Card.Title>Name : {details.name}</Card.Title>
+            <ul className ="list">
+                <li>Username: {details.username}</li>
+                <li>Email Address: {details.email}</li>
+                <li>Phone Number: {details.phone}</li>
+                <li>Website: {details.website}</li>
+                <li>Company: {details.company.name}</li>
+                <li>Address: </li>
+              <ul>
+                <li>Street: {details.address.street}</li>
+                <li>Suite: {details.address.suite}</li>
+                <li>City: {details.address.city}</li>
+                <li>Zipcode: {details.address.zipcode}</li>
               </ul>
-          </Card.Body>
-       </Card>
+            </ul>
+        </Card.Body>
+     </Card>
     </div>)}
-   </>  )
+   </> )
 }
 
 export default FullDetails;
