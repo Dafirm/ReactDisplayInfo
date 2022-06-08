@@ -13,7 +13,7 @@ const SingleCard = ({ client }) => {
       <Card>
           <div className = "AllClient">
             <div className = "Circle">{FirstLetter}</div>
-              <div className = "Container">
+              <div className = "Container2">
                 <Card.Body>
                   <div className = "Name">{client.name}</div>
 

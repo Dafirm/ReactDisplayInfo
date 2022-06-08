@@ -2,8 +2,6 @@ import React from 'react';
 
 
 const Contact = () => {
-
-
   return(
     <div className = "contactUs">
     <h3>CONTACT ADDRESS</h3>

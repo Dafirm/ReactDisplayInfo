@@ -21,6 +21,8 @@ const Home = () => {
   return (
     <div className = "home">
         <h1> Meet our clients</h1>
+        <div><p>
+        <br/></p></div>
           <Row>
               {clients.map((client) =>(
                 <Col md={4} lg={3} className = "Client-preview" key = {client.id}>
