@@ -11,16 +11,16 @@ const FullDetails = ({ clients }) => {
 
   const [details, setDetails] = useState("");
   useEffect(() => {
+    const fetchDetails = async() => {
+      let response = await fetch("https://jsonplaceholder.typicode.com/users/" + id)
+      let data = await response.json()
+      setDetails(data)
+    }
     fetchDetails();
   }, []);
 
 //fetch data from jsonplaceholder
-const fetchDetails = async() => {
-  let response = await fetch("https://jsonplaceholder.typicode.com/users/" + id)
-  let data = await response.json()
 
-  setDetails(data)
-}
   return(
     <>{details && ( //get all details first and out
       <div className ="FullDetail">
