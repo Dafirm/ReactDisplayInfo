@@ -1,22 +1,24 @@
 import React from 'react';
-import Navbar from './Navbar';
+import NavBar from './NavBar';
 import Home from './Home';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
+import FullDetails from "./FullDetails.js"
 //import { BrowserRouter, Route } from 'react-router-dom'
 
 
 function App() {
 
  return (
-    <div className = "App">
-      <Navbar/>
-        <h1 className="heading"> This is the information of clients!</h1>
-          <div className = "content">
-          <Home/>
-
+   <BrowserRouter>
+    <div>
+      <NavBar/>
+          <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/:id" element={<FullDetails />}/>
+          </Routes>
       </div>
-      </div>
+      </BrowserRouter>
   );
 }
 

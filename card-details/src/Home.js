@@ -1,42 +1,34 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import axios from "axios"
-import SingleCard from "./SingleCard.js"
-import { Row, Col } from "react-bootstrap"
+import axios from "axios";
+import SingleCard from "./SingleCard.js";
+import { Row, Col } from "react-bootstrap";
 
+//Function component for homepage
 const Home = () => {
   const [clients, setClients] = useState([]);
 
+//Fetch data from json placeholder
   useEffect(() => {
+    const fetchData = async () => {
+        const result = await axios.get("https://jsonplaceholder.typicode.com/users");
+        setClients(result.data);
+      };
     fetchData();
   }, []);
-  const fetchData = async () => {
-    try{
-      const result = await axios.get("https://jsonplaceholder.typicode.com/users");
-  console.log(result)
-      setClients(result.data);
-    } catch(error){
-      console.log(error)
-    }
 
-  };
-  console.log(clients)
+
   return (
-
     <div className = "home">
-
-
-    
-      {clients.map((client) =>(
-      <div className = "Client-preview" key = {client.id}>
-      <SingleCard client={client}/>
-      </div>
-    ))}
-
-
-
- </div>
+        <h1> Meet our clients</h1>
+          <Row>
+              {clients.map((client) =>(
+                <Col md={4} lg={3} className = "Client-preview" key = {client.id}>
+                  <SingleCard client={client}/>
+                </Col>
+              ))}
+          </Row>
+    </div>
   );
-
 }
 export default Home;
