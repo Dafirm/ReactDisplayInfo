@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 
+
 //fetching data and routing parameters of client full details
 const FullDetails = ({ clients }) => {
 
