@@ -25,7 +25,6 @@ const fetchDetails = async() => {
     <>{details && ( //get all details first and out
       <div className ="FullDetail">
       <Card>
-      //Output full client info
         <Card.Body>
           <Card.Title>Name : {details.name}</Card.Title>
             <ul className ="list">
